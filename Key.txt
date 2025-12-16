@@ -1,0 +1,60 @@
+📁 New File Structure
+1. general-style.css (Unified CSS)
+
+All styles consolidated into one file
+Organized by sections with clear comments
+Eliminated all duplication
+Reduced from ~400+ lines total to a single organized stylesheet
+Uses CSS custom properties (variables) for easy theming
+
+2. main.js (All Logic & Content)
+
+Data-driven approach: All content stored in pageData object
+Component builders: Reusable functions to build HTML sections
+Page renderers: renderHomePage() and renderDiatwinPage()
+Auto-detection: Automatically loads correct page based on URL
+Single source of truth for all content
+
+3. index.html (Minimal)
+
+Just 13 lines!
+Links to CSS and JS files
+Content generated dynamically
+
+4. DiaTwin.html (Minimal)
+
+Just 13 lines!
+Same structure as index.html
+Content generated dynamically
+
+✨ Key Benefits
+
+Massive code reduction: From ~1000+ lines to ~800 lines total (with better organization)
+Zero duplication: All shared styles and components in one place
+Easy maintenance: Update content in pageData object, changes reflect everywhere
+Consistent styling: Single CSS file ensures visual consistency
+Scalable: Easy to add new pages or sections
+
+🚀 How to Use
+
+Save all 4 files in your project root
+Make sure file names match exactly:
+
+general-style.css
+main.js
+index.html
+DiaTwin.html
+
+
+That's it! The JavaScript will automatically detect which page is loaded and render the appropriate content.
+
+🎯 To Add New Content
+Just edit the pageData object in main.js. For example, to add a new project:
+javascript// In pageData.home.projects array
+{
+    badge: 'New Badge',
+    title: 'New Project',
+    subtitle: 'Project Subtitle',
+    // ... rest of project data
+}
+The component builders handle all the HTML generation automatically!
