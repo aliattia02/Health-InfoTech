@@ -73,7 +73,7 @@ const pageData = {
                 ],
                 techStack: ['Flask/Python', 'spaCy NER', 'Leaflet.js', 'Vanilla JS', 'SQLite/CSV'],
                 links: [
-                    { text: 'View Project', href: 'humanitarian-crisis-portfolio.html', class: 'link-primary' },
+                    { text: 'View Project', href: 'crisis.html', class: 'link-primary' },
                     { text: 'Request Demo', href: '#contact',                            class: 'link-secondary' }
                 ]
             }
