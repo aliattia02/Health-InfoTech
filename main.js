@@ -60,21 +60,21 @@ const pageData = {
                 ]
             },
             {
-                badge: '19K+ Records',
-                title: 'Data Visualization Platform',
-                subtitle: 'Interactive Healthcare Analytics',
-                description: 'Sophisticated web platform for organizing and visualizing large-scale healthcare data with interactive maps, charts, and multilingual support.',
+                badge: 'Full-Stack · Production · 2025',
+                title: 'CrisisScope',
+                subtitle: 'Humanitarian Crisis Data Platform',
+                description: 'End-to-end humanitarian crisis data platform — NLP-powered incident extraction, multi-source data integration, interactive dual-timeline visualization, and structured evidence archival across 6 data domains. No third-party data warehouse. Every pipeline built from scratch.',
                 features: [
-                    '19,000+ searchable medical records',
-                    '400+ geographic data points with clustering',
-                    '30+ interactive visualizations',
-                    'Multilingual (3 languages, RTL support)',
-                    'Performance optimized (FCP < 2s)'
+                    '14,370+ incident records — NLP-coded & verified',
+                    '6 structured data domains with custom schemas',
+                    'Dual-timeline engine: historical (decades) + live stream',
+                    'Leaflet-powered geographic mapping with cluster markers',
+                    'GDPR-compliant · 3+ languages · offline SQLite queue'
                 ],
-                techStack: ['JavaScript', 'Chart.js', 'Leaflet.js', 'CSV/JSON'],
+                techStack: ['Flask/Python', 'spaCy NER', 'Leaflet.js', 'Vanilla JS', 'SQLite/CSV'],
                 links: [
-                    { text: 'View Project', href: 'https://github.com/aliattia2', class: 'link-primary' },
-                    { text: 'Request Demo', href: '#contact',                      class: 'link-secondary' }
+                    { text: 'View Project', href: 'humanitarian-crisis-portfolio.html', class: 'link-primary' },
+                    { text: 'Request Demo', href: '#contact',                            class: 'link-secondary' }
                 ]
             }
         ],
@@ -227,6 +227,83 @@ const pageData = {
             { layer: 'Web',      tags: ['React 18', 'TypeScript', 'Vercel'] },
             { layer: 'Backend',  tags: ['Python / Flask', 'MongoDB Atlas', 'Render'] },
             { layer: 'AI & Storage', tags: ['Gemini AI', 'Cloudinary', 'JWT HS256'] }
+        ]
+    },
+
+    // ==================== CRISISSCOPE DATA ====================
+    crisisscope: {
+        nav: {
+            logo: { icon: 'CS', text: 'CrisisScope' },
+            links: [
+                { text: 'Pipeline',   href: '#pipeline' },
+                { text: 'Domains',    href: '#domains' },
+                { text: 'Standards',  href: '#compliance' },
+                { text: 'Stack',      href: '#stack' },
+                { text: 'Contact',    href: '#contact' },
+                { text: '← Back',    href: 'index.html', class: 'back-link' }
+            ]
+        },
+        hero: {
+            badge: 'Full-Stack · Production · 2025',
+            title: 'CrisisScope',
+            subtitle: 'Humanitarian Crisis Data Platform',
+            description: 'End-to-end humanitarian crisis data platform — NLP-powered incident extraction, multi-source data integration, interactive dual-timeline visualization, and structured evidence archival across 6 data domains. No third-party data warehouse. Every pipeline built from scratch.',
+            ctaButtons: [
+                { text: 'Live Demo ↗', href: '#',                           class: 'cta-primary' },
+                { text: 'GitHub ↗',   href: 'https://github.com/aliattia2', class: 'cta-secondary', target: '_blank' }
+            ],
+            tags: ['NLP Extraction', 'Dual-Timeline Engine', 'Multi-source Integration', 'GDPR-Ready', '14,370+ Records', 'Leaflet Maps']
+        },
+        stats: [
+            { number: '6',       label: 'Structured Data Domains Implemented' },
+            { number: '35+',     label: 'REST Endpoints Across 5 Modules' },
+            { number: '14,370+', label: 'Incident Records — NLP-Coded & Verified' },
+            { number: '3+',      label: 'Languages via Dynamic Translation' }
+        ],
+        pipeline: [
+            { num: '01', title: 'Collection',    sub: 'Flask + BeautifulSoup · Batch URL processing · Multi-source feeds' },
+            { num: '02', title: 'Extraction',    sub: 'NLP · spaCy NER · Offline SQLite queue · Zero data loss' },
+            { num: '03', title: 'Structuring',   sub: 'JSON / CSV schemas · Classification taxonomy · Source verification' },
+            { num: '04', title: 'Analysis',      sub: 'Statistical aggregation · Trend detection · Severity scoring' },
+            { num: '05', title: 'Visualization', sub: 'Dual-timeline · Leaflet maps · Interactive charts · CSV export' }
+        ],
+        domains: [
+            { tag: 'IncidentRecord',        desc: 'Timestamped crisis events with location, type classification, casualty figures, and source attribution.' },
+            { tag: 'CasualtyData',          desc: 'Structured casualty records with demographic breakdown, verification status, and family-level detail.' },
+            { tag: 'InfrastructureEvent',   desc: 'Attacks on protected sites — medical, educational, religious, water, and food infrastructure.' },
+            { tag: 'HumanitarianIndicator', desc: 'Nutrition, displacement, aid access, and economic indicators with trend analysis and threshold alerts.' },
+            { tag: 'HistoricalRecord',      desc: 'Longitudinal event records spanning decades — normalized schema for cross-era comparative analysis.' },
+            { tag: 'DocumentBundle',        desc: 'Full evidence export per incident — structured JSON bundle with all linked records, sources, and metadata.' }
+        ],
+        features: [
+            { icon: '🧠', title: 'NLP Incident Extraction',     desc: 'Analysts submit raw news article URLs; Flask parses content, runs spaCy NER entity recognition, and maps events to the incident taxonomy. Offline SQLite queue ensures zero data loss during connectivity gaps.' },
+            { icon: '📅', title: 'Dual-Timeline Engine',        desc: '62KB hand-built timeline manager renders historical records (spanning decades) and current incident streams simultaneously. Three view modes — Timeline, Map, and List — with CSV-powered data loading and advanced filtering.' },
+            { icon: '🗺️', title: 'Geographic Incident Mapping', desc: 'Incidents plotted on interactive Leaflet maps with type-coded markers, zoom-level filtering, and click-through modals showing full incident detail with source attribution.' },
+            { icon: '🌐', title: 'Multi-language Support',      desc: 'Dynamic JSON translation system with language detection and RTL-ready fallback. Supports 3+ locales for international humanitarian monitoring teams.' },
+            { icon: '📦', title: 'Evidence Bundle Export',      desc: 'Full evidence export per incident — structured JSON bundle with all linked records, sources, and metadata. CSV export pipeline for all domains with one-click backup creation.' },
+            { icon: '🔒', title: 'GDPR-Compliant Archival',     desc: 'No personally identifiable data stored without consent. Source verification and attribution tracking on every record. OMOP CDM-compatible schema for analytics-database integration.' }
+        ],
+        compliance: [
+            { label: 'Multi-source data integration — news, NGO reports, institutional feeds',        status: '✓ Implemented', type: 'green' },
+            { label: 'Source verification & attribution tracking on every record',                     status: '✓ Enforced',    type: 'green' },
+            { label: 'GDPR-compliant — no personally identifiable data stored without consent',        status: '✓ Compliant',   type: 'green' },
+            { label: 'Offline-capable SQLite extraction queue — zero data loss on connectivity loss',  status: '✓ Implemented', type: 'green' },
+            { label: 'Structured incident taxonomy — 12 event types, hierarchical classification',     status: '✓ Defined',     type: 'green' },
+            { label: 'Full evidence bundle export (JSON) — per-incident, on-demand',                  status: '✓ On-demand',   type: 'green' },
+            { label: 'CSV export pipeline — all domains, download & backup creation',                 status: '✓ Implemented', type: 'green' },
+            { label: 'Multi-language support — dynamic JSON translation, 3+ locales',                 status: '✓ Active',      type: 'blue'  },
+            { label: 'GitHub Pages auto-detection & dynamic path resolution',                         status: '✓ Implemented', type: 'blue'  },
+            { label: 'OMOP CDM-compatible schema design — analytics-database ready',                  status: '◎ Ready',       type: 'amber' }
+        ],
+        techStack: [
+            { layer: 'Data Collection', tags: ['Flask + Python', 'BeautifulSoup', 'Batch URL Processor'] },
+            { layer: 'NLP / AI',        tags: ['spaCy', 'NER Pipeline', 'Confidence Scoring'] },
+            { layer: 'Storage',         tags: ['SQLite', 'JSON', 'CSV'] },
+            { layer: 'Visualization',   tags: ['Leaflet.js', 'D3', 'GeoJSON'] },
+            { layer: 'Frontend',        tags: ['Vanilla JS ES6', '62KB Timeline Engine', '67KB Map Engine'] },
+            { layer: 'i18n',            tags: ['Dynamic JSON Translation', 'RTL Support', 'Language Detection'] },
+            { layer: 'Deployment',      tags: ['GitHub Pages', 'CNAME', 'CI-ready'] },
+            { layer: 'Styling',         tags: ['CSS Variables', 'Responsive', 'Dual Theme'] }
         ]
     }
 };
@@ -734,6 +811,14 @@ function buildFooter(type = 'home') {
             </footer>
         `;
     }
+    if (type === 'crisis') {
+        return `
+            <footer>
+                <p>&copy; 2025 CrisisScope | Health Info Tech | Developed by Ali Attia</p>
+                <p style="margin-top: 0.5rem; opacity: 0.8; font-size: 0.9rem;">NLP-Powered · GDPR-Ready · v1.3.0 | Frankfurt / Munich, Germany</p>
+            </footer>
+        `;
+    }
     return `
         <footer>
             <p>&copy; 2016-2025 Health Info Tech. Healthcare AI Solutions.</p>
@@ -741,6 +826,206 @@ function buildFooter(type = 'home') {
                 Founded 2016 | Munich, Germany | M.Sc. Digital Health (LMU Munich)
             </p>
         </footer>
+    `;
+}
+
+
+// ==================== CRISISSCOPE BUILDERS ====================
+
+function buildHeroCrisisScope(data) {
+    return `
+        <section class="hero" style="background: linear-gradient(135deg, #0f1f2e 0%, #07090f 100%);">
+            <div class="hero-content">
+                <div class="hero-badge">${data.badge}</div>
+                <h1>${data.title}</h1>
+                <p class="hero-subtitle" style="font-size:1.3rem; opacity:0.85;">${data.subtitle}</p>
+                <p>${data.description}</p>
+                <div class="cta-buttons" style="margin-top:1.5rem;">
+                    ${data.ctaButtons.map(btn => `
+                        <a href="${btn.href}" class="cta-button ${btn.class}" ${btn.target ? `target="${btn.target}"` : ''}>${btn.text}</a>
+                    `).join('')}
+                </div>
+                <div class="tech-stack" style="margin-top:1.5rem; justify-content:center;">
+                    ${data.tags.map(tag => `<span class="tech-tag" style="background:rgba(232,98,42,0.15); color:#e8622a; border:1px solid rgba(232,98,42,0.3);">${tag}</span>`).join('')}
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function buildCrisisScopeStatsSection(stats) {
+    return `
+        <section style="padding: 3rem 0; background: var(--card-bg, #f8f9fa);">
+            <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--border-color,#e0e0e0); max-width:1100px; margin:0 auto; padding:0 2rem; border-radius:10px; overflow:hidden;">
+                ${stats.map(stat => `
+                    <div style="background:var(--bg-color,#fff); padding:1.75rem 1.5rem; display:flex; flex-direction:column; gap:.4rem;">
+                        <span style="font-size:2.5rem; font-weight:800; color:#e8622a; line-height:1;">${stat.number}</span>
+                        <span style="font-size:.8rem; color:var(--text-muted,#888); line-height:1.4;">${stat.label}</span>
+                    </div>
+                `).join('')}
+            </div>
+        </section>
+    `;
+}
+
+function buildPipelineSection(pipeline) {
+    return `
+        <section id="pipeline">
+            <h2 class="section-title">End-to-End Data Pipeline</h2>
+            <p class="section-subtitle">Every stage built in-house — from raw news ingestion to structured JSON storage to interactive visualization</p>
+            <div style="display:flex; border:1px solid var(--border-color,#e0e0e0); border-radius:10px; overflow:hidden; margin-bottom:2rem;">
+                ${pipeline.map((step, i) => `
+                    <div class="feature-card" style="flex:1; border-radius:0; border:none; border-right:${i < pipeline.length - 1 ? '1px solid var(--border-color,#e0e0e0)' : 'none'}; position:relative;">
+                        <div style="font-size:.7rem; color:var(--text-muted,#888); margin-bottom:.5rem; font-family:monospace;">${step.num}</div>
+                        <h3 class="feature-title">${step.title}</h3>
+                        <p class="feature-desc" style="font-size:.8rem;">${step.sub}</p>
+                        ${i < pipeline.length - 1 ? `<div style="position:absolute; right:-10px; top:50%; transform:translateY(-50%); color:#e8622a; font-size:.7rem; z-index:2;">&#9658;</div>` : ''}
+                    </div>
+                `).join('')}
+            </div>
+        </section>
+    `;
+}
+
+function buildDomainsSection(domains) {
+    return `
+        <section id="domains">
+            <h2 class="section-title">6 Structured Data Domains</h2>
+            <p class="section-subtitle">Each domain features a custom schema supporting filtering, geographic mapping, temporal indexing, and CSV export — no external database engine</p>
+            <div class="features-grid">
+                ${domains.map(domain => `
+                    <div class="feature-card">
+                        <div class="feature-header">
+                            <div class="feature-icon" style="font-size:.78rem; font-weight:700; color:#e8622a; display:flex; align-items:center; gap:.4rem;">
+                                <div style="width:6px; height:6px; border-radius:50%; background:#e8622a; flex-shrink:0;"></div>
+                                ${domain.tag}
+                            </div>
+                        </div>
+                        <p class="feature-desc">${domain.desc}</p>
+                    </div>
+                `).join('')}
+            </div>
+        </section>
+    `;
+}
+
+function buildCrisisScopeFeaturesSection(features) {
+    return `
+        <section>
+            <h2 class="section-title">Platform Capabilities</h2>
+            <p class="section-subtitle">From NLP extraction to geographic visualization — all built from scratch</p>
+            <div class="features-grid">
+                ${features.map(f => `
+                    <div class="feature-card">
+                        <div class="feature-header">
+                            <div class="feature-icon">${f.icon}</div>
+                            <h3 class="feature-title">${f.title}</h3>
+                        </div>
+                        <p class="feature-desc">${f.desc}</p>
+                    </div>
+                `).join('')}
+            </div>
+        </section>
+    `;
+}
+
+function buildCrisisScopeComplianceSection(compliance) {
+    const colorMap = { green: '#2d6a4f', blue: '#1a73e8', amber: '#b45309' };
+    return `
+        <section id="compliance" style="background:var(--card-bg,#f8f9fa); padding:4rem 0;">
+            <div style="max-width:1100px; margin:0 auto; padding:0 2rem;">
+                <h2 class="section-title" style="text-align:left;">Standards & Data Governance</h2>
+                <p class="section-subtitle" style="text-align:left; margin-bottom:2rem;">Data Integrity · GDPR-Ready · Evidence Chain</p>
+                <div style="max-width:750px;">
+                    ${compliance.map(row => `
+                        <div style="display:flex; align-items:center; justify-content:space-between; padding:.85rem 1.25rem; background:var(--card-bg2,#fff); border:1px solid var(--border-color,#e0e0e0); border-radius:8px; margin-bottom:.6rem;">
+                            <span style="font-family:monospace; font-size:.78rem; color:var(--text-secondary,#555);">${row.label}</span>
+                            <span style="font-family:monospace; font-size:.7rem; padding:.2rem .75rem; border-radius:99px; white-space:nowrap; margin-left:1rem; flex-shrink:0;
+                                color:${colorMap[row.type] || '#555'}; background:${colorMap[row.type] || '#555'}22; border:1px solid ${colorMap[row.type] || '#555'}44;">
+                                ${row.status}
+                            </span>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function buildCrisisScopeTechStackSection(stack) {
+    return `
+        <section id="stack">
+            <h2 class="section-title">Technology Stack</h2>
+            <p class="section-subtitle">Built from scratch across 8 layers — 195KB of custom JS, no framework</p>
+            <div class="services-grid">
+                ${stack.map(item => `
+                    <div class="service-card">
+                        <div class="service-icon" style="font-size:.7rem; font-weight:700; color:var(--secondary,#1a73e8); letter-spacing:.06em; text-transform:uppercase; margin-bottom:.5rem;">${item.layer}</div>
+                        <div class="tech-stack" style="margin-top:.25rem;">
+                            ${item.tags.map(tag => `<span class="tech-tag">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+            <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:2rem;">
+                <div class="service-card" style="text-align:center;">
+                    <div style="font-size:2rem; font-weight:800; color:#e8622a;">195KB</div>
+                    <div style="font-size:.82rem; color:var(--text-muted,#888);">of custom JS — no React, no framework</div>
+                </div>
+                <div class="service-card" style="text-align:center;">
+                    <div style="font-size:2rem; font-weight:800; color:var(--primary,#2d6a4f);">6 Active</div>
+                    <div style="font-size:.82rem; color:var(--text-muted,#888);">data domains — 23+ sub-pages in roadmap</div>
+                </div>
+                <div class="service-card" style="text-align:center;">
+                    <div style="font-size:2rem; font-weight:800; color:var(--secondary,#1a73e8);">v1.3.0</div>
+                    <div style="font-size:.82rem; color:var(--text-muted,#888);">Active · last push April 2026</div>
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function buildCrisisScopeCtaSection() {
+    return `
+        <div class="cta-section">
+            <h2>NLP-Powered. GDPR-Ready. Built for Humanitarian Analysis.</h2>
+            <p>An end-to-end incident data platform built entirely from scratch — no pre-built data warehouses, no BI platforms.</p>
+            <div class="cta-buttons">
+                <a href="#" class="cta-button cta-primary">Live Demo ↗</a>
+                <a href="#contact" class="cta-button cta-secondary">Get in Touch</a>
+            </div>
+        </div>
+    `;
+}
+
+function buildContactSectionCrisisScope() {
+    return `
+        <section class="contact" id="contact">
+            <div class="contact-content">
+                <h2>Interested in CrisisScope?</h2>
+                <p style="margin-bottom: 2rem; opacity: 0.9;">
+                    Whether you're an NGO, research institution, or journalist looking for structured humanitarian data tooling — let's talk.
+                </p>
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <strong>Email</strong>
+                        <a href="mailto:aliattia2@gmail.com">aliattia2@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>GitHub</strong>
+                        <a href="https://github.com/aliattia02" target="_blank">github.com/aliattia02</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>LinkedIn</strong>
+                        <a href="https://www.linkedin.com/in/ali-attia-74748bb4/" target="_blank">Connect with me</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location</strong>
+                        <span style="color: var(--secondary);">Frankfurt / Munich, Germany</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     `;
 }
 
@@ -794,6 +1079,24 @@ function renderMorafekPage() {
     `;
 }
 
+function renderCrisisScopePage() {
+    const data = pageData.crisisscope;
+    document.title = 'CrisisScope — Humanitarian Crisis Data Platform · Health Info Tech';
+    document.body.innerHTML = `
+        ${buildNav(data.nav)}
+        ${buildHeroCrisisScope(data.hero)}
+        ${buildCrisisScopeStatsSection(data.stats)}
+        ${buildPipelineSection(data.pipeline)}
+        ${buildDomainsSection(data.domains)}
+        ${buildCrisisScopeFeaturesSection(data.features)}
+        ${buildCrisisScopeComplianceSection(data.compliance)}
+        ${buildCrisisScopeTechStackSection(data.techStack)}
+        ${buildCrisisScopeCtaSection()}
+        ${buildContactSectionCrisisScope()}
+        ${buildFooter('crisis')}
+    `;
+}
+
 // ==================== INITIALIZATION ====================
 
 function initPage() {
@@ -803,6 +1106,8 @@ function initPage() {
         renderDiatwinPage();
     } else if (path.includes('morafek')) {
         renderMorafekPage();
+    } else if (path.includes('crisis') || path.includes('humanitarian')) {
+        renderCrisisScopePage();
     } else {
         renderHomePage();
     }
